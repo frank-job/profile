@@ -23,33 +23,13 @@ const STACK = [
   'Git',
 ];
 
-const CODE_SNIPPET = `
-<span class="tok-com">// the short version</span>
-<span class="tok-key">const</span> <span class="tok-fn">developer</span> <span class="tok-key">=</span> <span class="tok-prop">Developer</span><span class="caret"></span> <span class="tok-key">from</span> <span class="tok-str">"uganda"</span><span class="tok-com">;</span>
-
-<span class="tok-key">export const</span> <span class="tok-fn">yakan</span> <span class="tok-key">=</span> {
-  <span class="tok-prop">name</span><span class="tok-key">:</span>     <span class="tok-str">"Yakan Frank"</span><span class="tok-com">,</span>
-  <span class="tok-prop">role</span><span class="tok-key">:</span>     <span class="tok-str">"Full-Stack Developer"</span><span class="tok-com">,</span>
-  <span class="tok-prop">basedIn</span><span class="tok-key">:</span>  <span class="tok-str">"Uganda"</span><span class="tok-com">,</span>
-  <span class="tok-prop">school</span><span class="tok-key">:</span>   <span class="tok-str">"BYU"</span><span class="tok-com">,</span>
-
-  <span class="tok-prop">stack</span><span class="tok-key">:</span> [
-    <span class="tok-str">"TypeScript"</span>, <span class="tok-str">"Next.js"</span>, <span class="tok-str">"React"</span><span class="tok-com">,</span>
-    <span class="tok-str">"Node.js"</span>, <span class="tok-str">"Python"</span>, <span class="tok-str">"C#"</span><span class="tok-com">,</span>
-    <span class="tok-str">"Vite"</span>, <span class="tok-str">"SQL"</span>, <span class="tok-str">"Adobe"</span>, <span class="tok-str">"MS Office"</span><span class="tok-com">,</span>
-  ],
-
-  <span class="tok-prop">available</span><span class="tok-key">:</span> <span class="tok-num">true</span><span class="tok-com">,</span>
-};
-`;
-
 if (section) {
   section.innerHTML = `
     <section id="home" class="relative flex items-center overflow-hidden pt-24 pb-10 sm:pt-28 sm:pb-12">
       <div class="relative z-10 mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8">
-        <div class="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+        <div class="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
 
-          <div class="text-center lg:text-left order-2 lg:order-1">
+          <div class="order-2 lg:order-1 text-center lg:text-left">
             <span class="badge animate-fade-up" style="animation-delay:0.05s">
               <span class="badge-dot"></span> Available for freelance &amp; full-time roles
             </span>
@@ -98,8 +78,7 @@ if (section) {
             </dl>
           </div>
 
-          <div class="order-1 lg:order-2 flex flex-col items-center gap-5 animate-fade-up" style="animation-delay:0.35s">
-
+          <div class="order-1 lg:order-2 flex justify-center animate-fade-up" style="animation-delay:0.35s">
             <div class="glass-strong rounded-[2rem] p-3 sm:p-4 w-full max-w-sm">
               <div class="avatar-ring">
                 <img src="${profileImg}" alt="Yakan Frank, software developer"
@@ -113,16 +92,6 @@ if (section) {
                 </div>
                 <span class="badge shrink-0">BYU</span>
               </div>
-            </div>
-
-            <div class="code-card w-full max-w-sm rounded-2xl overflow-hidden">
-              <div class="flex items-center gap-2 px-4 py-3 border-b border-white/15 bg-white/5">
-                <span class="code-dot bg-red-400"></span>
-                <span class="code-dot bg-amber-400"></span>
-                <span class="code-dot bg-emerald-400"></span>
-                <span class="ml-2 text-xs font-medium text-white/80">yakan.ts</span>
-              </div>
-              <pre class="overflow-x-auto px-4 py-4"><code>${CODE_SNIPPET}</code></pre>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import './main.js';
+import { codeCard } from './codeSnippet.js';
 
 const about = document.getElementById('about');
 
@@ -108,6 +109,27 @@ if (about) {
               ).join('')}
             </ol>
           </div>
+        </div>
+
+        <div class="section-grid grid gap-5 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-blue-600">In short</p>
+            <h3 class="mt-2 text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
+              Me, in <span class="gradient-text">code</span>
+            </h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">
+              If you'd rather read my CV than my paragraph — here it is in the format I actually
+              write in. TypeScript, strict mode, and far too many things going on at once.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="chip">Uganda</span>
+              <span class="chip">BYU</span>
+              <span class="chip">Full-Stack</span>
+              <span class="chip">Open to work</span>
+            </div>
+          </div>
+
+          ${codeCard()}
         </div>
       </div>
     </section>
