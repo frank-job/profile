@@ -8,7 +8,7 @@ const techFilter = [...new Set(projects.flatMap((project) => project.languages))
 
 if (container) {
   container.innerHTML = `
-    <section class="relative py-14 sm:py-20">
+    <section class="section relative">
       <div class="glow-orb w-96 h-96 top-10 -left-24 bg-blue-600/25 animate-drift"></div>
       <div class="glow-orb w-80 h-80 top-40 right-0 bg-sky-500/20 animate-drift" style="animation-delay:-8s"></div>
 
@@ -24,7 +24,7 @@ if (container) {
           </p>
         </div>
 
-        <div class="mt-10 flex flex-wrap gap-2" id="project-filters" role="group" aria-label="Filter projects by technology">
+        <div class="section-grid flex flex-wrap gap-2" id="project-filters" role="group" aria-label="Filter projects by technology">
           <button type="button" data-filter="all" class="btn btn-primary btn-sm">All</button>
           ${techFilter
             .map(
@@ -34,7 +34,7 @@ if (container) {
             .join('')}
         </div>
 
-        <div id="project-grid" class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        <div id="project-grid" class="section-grid grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           ${projects.map((project, index) => projectCard(project, { index, delayStep: 0.05 })).join('')}
         </div>
 

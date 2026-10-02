@@ -67,8 +67,8 @@ const GROUPS = [
 
 if (skills) {
   skills.innerHTML = `
-    <section id="skills" class="reveal relative py-14 sm:py-20">
-      <div class="glow-orb w-80 h-80 bottom-0 left-0 bg-indigo-600/20 animate-drift" style="animation-delay:-9s"></div>
+    <section id="skills" class="section bg-transparent relative reveal">
+      <div class=" w-80 h-80 bottom-0 left-0 bg-transparent" style="animation-delay:-9s"></div>
       <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         <div class="max-w-2xl">
@@ -82,7 +82,7 @@ if (skills) {
           </p>
         </div>
 
-        <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        <div class="section-grid grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           ${GROUPS.map(
             (group) => `
             <article class="glass glass-hover rounded-3xl p-6 sm:p-7 flex flex-col">

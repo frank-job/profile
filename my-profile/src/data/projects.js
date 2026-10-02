@@ -1,26 +1,18 @@
 import raw from './myData.json';
 
-import backendImg from '../images/backend.jpg';
-import csharpImg from '../images/C-sharp.jpg';
-import dashoardImg from '../images/dashoard.jpg';
-import ecoImg from '../images/eco.jpg';
-import filmImg from '../images/film.jpg';
-import quotesImg from '../images/qoutes.jpg';
-import ratImg from '../images/rat.jpg';
-import sleepImg from '../images/sleep.JPG';
-import wwrImg from '../images/wwr.jpg';
+/**
+ * Every image in src/images is available automatically, so adding a project to
+ * myData.json only requires dropping its image in that folder — no code changes.
+ */
+const imageModules = import.meta.glob('../images/**/*.{jpg,jpeg,png,webp,avif,svg,gif}', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+});
 
-const imageMap = {
-  'backend.jpg': backendImg,
-  'c-sharp.jpg': csharpImg,
-  'dashoard.jpg': dashoardImg,
-  'eco.jpg': ecoImg,
-  'film.jpg': filmImg,
-  'qoutes.jpg': quotesImg,
-  'rat.jpg': ratImg,
-  'sleep.jpg': sleepImg,
-  'wwr.jpg': wwrImg,
-};
+const imageMap = Object.fromEntries(
+  Object.entries(imageModules).map(([path, url]) => [path.split('/').pop().toLowerCase(), url])
+);
 
 const toList = (value) => {
   if (!value) return [];
@@ -32,7 +24,7 @@ const toList = (value) => {
 };
 
 const projects = raw.map((project, index) => ({
-  id: project.name,
+  id: `${project.name}-${index}`,
   name: project.name,
   description: String(project.description || '').trim(),
   link: project.link || '#',

@@ -40,7 +40,7 @@ const TIMELINE = [
 
 if (about) {
   about.innerHTML = `
-    <section id="about" class="relative py-14 sm:py-20">
+    <section id="about" class="section relative">
       <div class="glow-orb w-80 h-80 top-10 right-0 bg-blue-600/20 animate-drift"></div>
       <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
@@ -56,7 +56,7 @@ if (about) {
           </p>
         </div>
 
-        <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <div class="section-grid grid gap-5 md:grid-cols-3">
           ${FACTS.map(
             (fact) => `
             <article class="glass glass-hover rounded-3xl p-6 sm:p-7">
@@ -71,7 +71,7 @@ if (about) {
           ).join('')}
         </div>
 
-        <div class="mt-12 grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+        <div class="section-grid grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
           <div class="glass rounded-3xl p-6 sm:p-8">
             <h3 class="text-xl font-bold text-slate-900">How I work</h3>
             <ul class="mt-5 space-y-4 text-sm text-slate-700">

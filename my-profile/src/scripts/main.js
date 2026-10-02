@@ -1,15 +1,27 @@
 import header from './header.js';
 
+document.documentElement.classList.add('js');
+
 if (!document.querySelector('.aurora')) {
   document.body.insertAdjacentHTML('afterbegin', '<div class="aurora" aria-hidden="true"></div>');
 }
 
-const initReveal = () => {
-  const targets = document.querySelectorAll('.reveal');
+const BOUND = 'revealBound';
+
+const initReveal = (root = document) => {
+  const targets = [...root.querySelectorAll('.reveal')].filter(
+    (el) => !el.dataset[BOUND] && !el.classList.contains('is-visible')
+  );
+
   if (!targets.length) return;
 
+  const show = (el) => {
+    el.classList.add('is-visible');
+    el.dataset[BOUND] = 'true';
+  };
+
   if (!('IntersectionObserver' in window)) {
-    targets.forEach((el) => el.classList.add('is-visible'));
+    targets.forEach(show);
     return;
   }
 
@@ -17,20 +29,25 @@ const initReveal = () => {
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
+        show(entry.target);
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
   );
 
-  targets.forEach((el) => observer.observe(el));
+  targets.forEach((el) => {
+    el.dataset[BOUND] = 'true';
+    observer.observe(el);
+  });
 };
 
+const scheduleReveal = () => requestAnimationFrame(() => initReveal());
+
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initReveal, { once: true });
+  document.addEventListener('DOMContentLoaded', scheduleReveal, { once: true });
 } else {
-  initReveal();
+  scheduleReveal();
 }
 
 export { header, initReveal };

@@ -55,7 +55,7 @@ const CARDS = [
 
 if (services) {
   services.innerHTML = `
-    <section id="services" class="relative py-14 sm:py-20">
+    <section id="services" class="section relative">
       <div class="glow-orb w-96 h-96 top-1/4 -right-24 bg-sky-500/20 animate-drift" style="animation-delay:-4s"></div>
       <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
@@ -70,7 +70,7 @@ if (services) {
           </p>
         </div>
 
-        <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        <div class="section-grid grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           ${CARDS.map(
             (card) => `
             <article class="glass glass-hover rounded-3xl p-6 sm:p-7 flex flex-col">

@@ -45,9 +45,9 @@ const CODE_SNIPPET = `
 
 if (section) {
   section.innerHTML = `
-    <section id="home" class="relative min-h-[100svh] flex items-center overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-16">
+    <section id="home" class="relative flex items-center overflow-hidden pt-24 pb-10 sm:pt-28 sm:pb-12">
       <div class="relative z-10 mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8">
-        <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+        <div class="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
 
           <div class="text-center lg:text-left order-2 lg:order-1">
             <span class="badge animate-fade-up" style="animation-delay:0.05s">
@@ -69,13 +69,13 @@ if (section) {
               </span>
             </h2>
 
-            <p class="mt-6 max-w-xl mx-auto lg:mx-0 text-muted text-base sm:text-lg leading-relaxed animate-fade-up" style="animation-delay:0.45s">
+            <p class="mt-5 max-w-xl mx-auto lg:mx-0 text-muted text-base sm:text-lg leading-relaxed animate-fade-up" style="animation-delay:0.45s">
               Ugandan software developer, educated at BYU. I design and build clean, responsive
               full-stack applications with TypeScript, Next.js, React, Node.js, Python and C# —
               from relational database design to polished, production-ready interfaces.
             </p>
 
-            <div class="mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-3 animate-fade-up" style="animation-delay:0.55s">
+            <div class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 animate-fade-up" style="animation-delay:0.55s">
               <a href="#projects" class="btn btn-primary">
                 View My Work
                 <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
@@ -83,10 +83,10 @@ if (section) {
                 </svg>
               </a>
               <a href="#contact" class="btn btn-ghost">Contact Me</a>
-              <a href="/pages/projects/index.html" class="btn btn-ghost">All Projects</a>
+              <a href="#services" class="btn btn-ghost">What I do</a>
             </div>
 
-            <dl class="mt-8 grid grid-cols-3 gap-3 sm:gap-4 max-w-lg mx-auto lg:mx-0 animate-fade-up" style="animation-delay:0.65s">
+            <dl class="mt-7 grid grid-cols-3 gap-3 sm:gap-4 max-w-lg mx-auto lg:mx-0 animate-fade-up" style="animation-delay:0.65s">
               ${STATS.map(
                 (stat) => `
                 <div class="glass rounded-2xl px-3 py-4 text-center">
@@ -127,9 +127,9 @@ if (section) {
           </div>
         </div>
 
-        <div class="mt-10 sm:mt-12 animate-fade-in" style="animation-delay:0.9s">
+        <div class="mt-9 animate-fade-in" style="animation-delay:0.9s">
           <p class="text-center text-xs uppercase tracking-[0.3em] text-slate-500">Tech I work with</p>
-          <div class="relative mt-6 overflow-hidden mask-x">
+          <div class="relative mt-4 overflow-hidden mask-x">
             <div class="flex w-max animate-marquee gap-3 hover:[animation-play-state:paused]">
               ${[...STACK, ...STACK]
                 .map((tech) => `<span class="glass rounded-full px-5 py-2 text-sm font-medium text-slate-700 whitespace-nowrap">${tech}</span>`)
@@ -137,13 +137,16 @@ if (section) {
             </div>
           </div>
         </div>
-      </div>
 
-      <a href="#about" aria-label="Scroll to about" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-600 hover:text-blue-600 transition-colors">
-        <svg class="h-6 w-6 animate-scroll-hint" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-      </a>
+        <div class="mt-8 flex justify-center">
+          <a href="#about" aria-label="Scroll to about"
+            class="grid h-10 w-10 place-items-center rounded-full glass text-slate-500 hover:text-blue-600 transition-colors">
+            <svg class="h-5 w-5 animate-scroll-hint" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </section>
   `;
 }

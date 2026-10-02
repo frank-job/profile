@@ -34,12 +34,12 @@ const SERVICES_INTEREST = [
 
 if (contact) {
   contact.innerHTML = `
-    <section id="contact" class="relative py-14 sm:py-20">
+    <section id="contact" class="section relative">
       <div class="glow-orb w-96 h-96 top-10 left-1/2 -translate-x-1/2 bg-blue-600/25 animate-drift"></div>
       <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         <div class="glass-strong rounded-[2rem] p-6 sm:p-10 lg:p-14">
-          <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div class="grid gap-8 lg:gap-10 lg:grid-cols-[0.9fr_1.1fr]">
 
             <div>
               <p class="text-sm font-semibold uppercase tracking-[0.28em] text-blue-600">Contact</p>
@@ -117,7 +117,7 @@ if (contact) {
           </div>
         </div>
 
-        <footer class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 text-sm text-slate-600 sm:flex-row">
+        <footer class="mt-8 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-6 text-sm text-slate-600 sm:flex-row">
           <p>&copy; <span id="year"></span> Yakan Frank. Built with Vite &amp; Tailwind CSS.</p>
           <nav class="flex flex-wrap items-center justify-center gap-5" aria-label="Footer">
             <a href="/#home" class="transition-colors hover:text-slate-900">Home</a>
