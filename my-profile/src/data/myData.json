@@ -1,0 +1,98 @@
+
+
+[
+    {
+        "name": "PearlNet",
+        "image": "src/images/rat.jpg",
+        "description": " Is a dynamic social media application built with Next.js, designed to connect users through seamless content sharing and real-time interaction. It features a modern, responsive interface where users can customize their profiles, post updates, interact with content, and follow feeds. The platform prioritizes speed, performance, and user engagement, delivering a fluid social experience across all devices ",
+        "link": "https://rat-sandy.vercel.app/",
+        "School-Project": false,
+        "languages": ["Nextjs", "Tailwind"],
+        "Rating": 5
+        
+    },
+
+    {
+        "name": "backend-project",
+        "image": "src/images/backend.jpg",
+        "description": "A backend‑focused school project using JavaScript, SQL, Node.js, and Express. It demonstrates database integration, API design, and server‑side logic for managing structured data. It provides a solid foundation for backend development and is a valuable learning experience for developers.",
+        "link": "https://backend-w7ng.onrender.com",
+        "School-Project": true,
+        "languages": "javascript  Sql   nodejs express",
+        "Rating": 5
+    },
+    {
+        "name": "Handcrafted Haven Team",
+         "image": "src/images/dashoard.jpg",
+        "description": "A collaborative school project built with Next.js and Tailwind CSS. It showcases a handcrafted marketplace concept, focusing on clean UI, responsive design, and modern frontend practices.",
+        "link": "https://handcrafted-haven-team.vercel.app/",
+        "School-Project": true,
+        "languages": [
+            "Nextjs",
+            "Tailwind"
+        ],
+        "Rating": 5
+        
+    
+        
+    }
+    ,
+    {
+        "name": "XP-streams",
+        "image": "src/images/film.jpg",
+        "description": "A streaming platform prototype designed for entertainment content. It emphasizes smooth navigation, media playback, and a user‑friendly interface for discovering and enjoying streams.",
+        "link": "https://xp-stream.onrender.com/",
+        "School-Project": false,
+        "languages": "vite",
+        "Rating": 5
+      
+    }
+    ,
+    {
+        "name": "forever-quotes",
+          "image": "src/images/qoutes.jpg",
+        "description": "A quotes application that curates inspirational and motivational sayings. Built for simplicity and readability, it allows users to browse and reflect on timeless wisdom.",
+        "link": "https://forver-qts.onrender.com/",
+        "School-Project": false,
+        "languages": "vite ",
+        "Rating": 4
+    }
+    ,
+    
+    
+    {
+        "name": "wdd330-sleepoutside",
+        "image": "src/images/sleep.jpg",
+        "description": "A school project built with Vite, simulating an e‑commerce storefront for outdoor gear. It highlights product listings, shopping cart functionality, and responsive layouts.",
+        "link": "https://wdd330-sleepoutside-6wdr.onrender.com/",
+        "School-Project": true,
+        "languages": [" vite "],
+        "Rating": 4
+    },
+    {
+        "name": "c# pr0jects",
+          "image": "src/images/C-sharp.jpg",
+        "description": "A collection of C# programming exercises and projects, showcasing problem‑solving, object‑oriented design, and practical coding skills.",
+        "link": "https://github.com/frank-job/cse210-projects",
+      "languages": ["c#"],
+      "Rating": 5
+    },
+    {
+       "name": "ecotourism",
+        "image": "src/images/eco.jpg",
+       "description": "A static site built with HTML, CSS, and JavaScript promoting eco‑friendly tourism. It emphasizes sustainability, nature appreciation, and clean web design. ",
+       "link": "https://frank-job.github.io/wdd131/ecotourism/" ,
+    
+       "languages": ["html", "css", "js"],
+       "Rating": 4
+    },
+    {
+        "name": "Water Rafting site",
+        "image": "src/images/wwr.jpg",
+        "description": "A visually engaging site created with HTML, CSS, and JavaScript to showcase water rafting adventures. It features vibrant imagery, activity details, and a structured layout for tourism promotion.",
+        "link": "https://frank-job.github.io/wdd130/wwr/",
+        "languages": ["html", "css", "js"],
+        "Rating":4
+
+    }
+]
